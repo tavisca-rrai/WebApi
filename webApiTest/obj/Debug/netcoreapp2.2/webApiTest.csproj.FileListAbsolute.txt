@@ -1,0 +1,17 @@
+C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\webApiTest.deps.json
+C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\webApiTest.runtimeconfig.json
+C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\webApiTest.runtimeconfig.dev.json
+C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\webApiTest.dll
+C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\WebApi.dll
+C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\WebApi.pdb
+C:\Users\rarai\source\repos\WebApi\webApiTest\obj\Debug\netcoreapp2.2\webApiTest.csprojAssemblyReference.cache
+C:\Users\rarai\source\repos\WebApi\webApiTest\obj\Debug\netcoreapp2.2\webApiTest.csproj.CoreCompileInputs.cache
+C:\Users\rarai\source\repos\WebApi\webApiTest\obj\Debug\netcoreapp2.2\webApiTest.AssemblyInfoInputs.cache
+C:\Users\rarai\source\repos\WebApi\webApiTest\obj\Debug\netcoreapp2.2\webApiTest.AssemblyInfo.cs
+C:\Users\rarai\source\repos\WebApi\webApiTest\obj\Debug\netcoreapp2.2\webApiTest.csproj.CopyComplete
+C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\webApiTest.pdb
+C:\Users\rarai\source\repos\WebApi\webApiTest\obj\Debug\netcoreapp2.2\webApiTest.dll
+C:\Users\rarai\source\repos\WebApi\webApiTest\obj\Debug\netcoreapp2.2\webApiTest.pdb
