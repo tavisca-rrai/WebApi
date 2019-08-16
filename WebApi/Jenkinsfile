@@ -2,35 +2,34 @@ pipeline {
     agent any
     parameters {
         string(name: 'GIT_HTTP_PATH', defaultValue: 'https://github.com/tavisca-rrai/WebApi.git', description: 'Value For Git Repo')
-        string(name: 'SOLUTION_FILE_PATH', defaultValue: 'WebApi.sln', description: 'Path to the Solution')
-        string(name: 'TEST_PROJECT_PATH', defaultValue: 'webApiTest/webApiTest.csproj', description: 'Path to Tests project')
-        choice(name: "Environment", choices: ["build","test"],description : 'Select Environment to run')
-    }
-    stages {
-        stage('build') {
-            when {
-                expression {
-                  params.Environment == 'build';
+            string(name: 'SOLUTION_FILE_PATH', defaultValue: 'WebApi.sln', description: 'Path to the Solution')
+        }
+        stages {
+
+            stage("checkout git"){
+                steps {
+                    git '$GIT_REPO_PATH'
                 }
             }
-            steps {
-                sh '''
-                dotnet restore ${SOLUTION_FILE_PATH} --source https://api.nuget.org/v3/index/json
-                dotnet build ${SOLUTION_FILE_PATH} -p:Configuration=release -v:n
-                '''
-            }
-        }
-        stage('test') {
-            when {
-                expression {
-                  params.Environment == 'test';
+            stage("build"){
+                steps {
+                    powershell '''
+                    dotnet build $($env:SOLUTION_FILE_PATH) -p:Configuration=release -v:n
+                    dotnet test $($env:SOLUTION_FILE_PATH)
+                    dotnet publish $($env:SOLUTION_FILE_PATH) -c Release
+                    compress-archive WebApi/bin/Release/netcoreapp2.1/publish/ artifact.zip -Update
+                    '''
                 }
             }
-            steps {
-               sh'''
-               dotnet test ${TEST_PROJECT_PATH}
-               '''               
+
+            stage("deploy"){
+                steps {
+                    powershell '''
+                    expand-archive ../vikram_webapi_build_deploy/artifact.zip ./ -Force
+                    dotnet publish/WebApi.dll
+                    '''
+                }
             }
-        }
+            
     }
 }
