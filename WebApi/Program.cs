@@ -15,6 +15,7 @@ namespace WebApi
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
+            Console.WriteLine("i am listening");
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

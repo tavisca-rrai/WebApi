@@ -6,7 +6,6 @@ C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\webApiTest
 C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\webApiTest.runtimeconfig.dev.json
 C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\webApiTest.dll
 C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\WebApi.dll
-C:\Users\rarai\source\repos\WebApi\webApiTest\bin\Debug\netcoreapp2.2\WebApi.pdb
 C:\Users\rarai\source\repos\WebApi\webApiTest\obj\Debug\netcoreapp2.2\webApiTest.csprojAssemblyReference.cache
 C:\Users\rarai\source\repos\WebApi\webApiTest\obj\Debug\netcoreapp2.2\webApiTest.csproj.CoreCompileInputs.cache
 C:\Users\rarai\source\repos\WebApi\webApiTest\obj\Debug\netcoreapp2.2\webApiTest.AssemblyInfoInputs.cache
