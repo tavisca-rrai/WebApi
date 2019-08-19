@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pipeline {
     agent any
     parameters {
@@ -32,4 +33,40 @@ pipeline {
             }
             
     }
+=======
+pipeline {
+    agent any
+    parameters {
+        string(name: 'GIT_HTTP_PATH', defaultValue: 'https://github.com/tavisca-rrai/WebApi.git', description: 'Value For Git Repo')
+            string(name: 'SOLUTION_FILE_PATH', defaultValue: 'WebApi.sln', description: 'Path to the Solution')
+        }
+        stages {
+
+            stage("checkout git"){
+                steps {
+                    git '$GIT_REPO_PATH'
+                }
+            }
+            stage("build"){
+                steps {
+                    powershell '''
+                    dotnet build $($env:SOLUTION_FILE_PATH) -p:Configuration=release -v:n
+                    dotnet test $($env:SOLUTION_FILE_PATH)
+                    dotnet publish $($env:SOLUTION_FILE_PATH) -c Release
+                    compress-archive WebApi/bin/Release/netcoreapp2.1/publish/ artifact.zip -Update
+                    '''
+                }
+            }
+
+            stage("deploy"){
+                steps {
+                    powershell '''
+                    expand-archive ../vikram_webapi_build_deploy/artifact.zip ./ -Force
+                    dotnet publish/WebApi.dll
+                    '''
+                }
+            }
+            
+    }
+>>>>>>> 3d74814d11fc6440fa6bf4abc7806d37af7e3c62
 }
